@@ -12,3 +12,12 @@ git clone https://github.com/LineageOS/android_hardware_xiaomi.git -b lineage-23
 git clone https://github.com/LineageOS/android_hardware_mediatek.git -b lineage-23.2 hardware/mediatek
 git clone https://github.com/techyminati/android_vendor_mediatek_ims vendor/mediatek/ims/
 
+echo "Reverting hardware/mediatek to working commit..."
+
+cd hardware/mediatek || exit 1
+
+git checkout 44d4c69
+
+cd ../..
+
+echo "Done."
