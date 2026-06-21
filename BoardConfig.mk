@@ -8,6 +8,15 @@ DEVICE_PATH := device/xiaomi/gale
 
 BUILD_BROKEN_DUP_RULES := true
 
+# Enable 64-bit for non-zygote.
+ZYGOTE_FORCE_64 := true
+
+# Include 64-bit drmserver to support 64-bit only devices
+TARGET_DYNAMIC_64_32_DRMSERVER := true
+
+# Include 64-bit mediaserver to support 64-bit only devices
+TARGET_DYNAMIC_64_32_MEDIASERVER := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -61,10 +70,6 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_gale
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_gale
-
 # Kernel
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_OFFSET := 0x00008000
@@ -78,8 +83,6 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 BOARD_MKBOOTIMG_ARGS := --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
@@ -96,6 +99,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_NO_GCC := true
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_SEPARATED_DTBO := true
 
 # NFC
 ODM_MANIFEST_SKUS += \
@@ -136,6 +140,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # SPL
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
@@ -176,8 +181,9 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    vendor/lineage/config/device_framework_matrix.xml \
-    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
 
 # Inherit the proprietary files
 include vendor/xiaomi/gale/BoardConfigVendor.mk

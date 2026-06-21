@@ -1,4 +1,4 @@
-<compatibility-matrix version="2.0" type="framework">
+<compatibility-matrix version="9.0" type="framework">
     <hal format="hidl" optional="true">
        <name>android.hardware.drm</name>
         <version>1.0-4</version>
@@ -398,7 +398,7 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-       <name>vendor.mediatek.hardware.netdagent</name>
+        <name>vendor.mediatek.hardware.netdagent</name>
         <version>1.0</version>
         <interface>
            <name>INetdagent</name>
@@ -421,29 +421,19 @@
            <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-    <name>vendor.nxp.nxpnfc</name>
-    <version>2.0</version>
+    <hal format="aidl">
+        <name>vendor.nxp.nxpnfc_aidl</name>
         <interface>
-           <name>INxpNfc</name>
-           <instance>default</instance>
+            <name>INxpNfc</name>
+            <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.tms.tmsnfc</name>
-        <version>1.0</version>
+    <hal format="aidl">
+        <name>vendor.tms.tmsnfc_aidl</name>
         <interface>
             <name>ITmsNfc</name>
             <instance>default</instance>
         </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-    <name>vendor.nxp.nxpnfclegacy</name>
-    <version>1.0</version>
-       <interface>
-          <name>INxpNfcLegacy</name>
-          <instance>default</instance>
-       </interface>
     </hal>
     <hal format="hidl" optional="true">
        <name>vendor.mediatek.hardware.videotelephony</name>

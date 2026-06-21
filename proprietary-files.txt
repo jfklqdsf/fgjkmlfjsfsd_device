@@ -31,7 +31,6 @@ vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libbwc.so
 vendor/lib/libcvsd_mtk.so
-vendor/lib/libladder.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkshifter_vendor.so
@@ -41,8 +40,6 @@ vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
-vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio Configs
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -163,24 +160,14 @@ vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/firmware/BT_FW.cfg
 vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin
-vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbt-vendor.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth (A2DP)
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/camerahalserver
@@ -283,8 +270,6 @@ vendor/lib64/libheichal.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/liblpcnr.so
@@ -634,64 +619,7 @@ vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/lib/arm.graphics-V1-ndk_platform.so
-vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
-vendor/lib/egl/libGLES_meow.so
-vendor/lib/egl/libMEOW_data.so
-vendor/lib/egl/libMEOW_gift.so
-vendor/lib/egl/libMEOW_qt.so
-vendor/lib/egl/libMEOW_trace.so
-vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
-vendor/lib/libDefaultFpsActor.so
-vendor/lib/libFrameRecord.so
-vendor/lib/libNoFpsActor.so
-vendor/lib/libOpenCL.so
-vendor/lib/libaal_cust.so
-vendor/lib/libaal_key.so
-vendor/lib/libaal_mtk.so
-vendor/lib/libaalservice.so
-vendor/lib/libappgamepq.so
-vendor/lib/libdre.so
-vendor/lib/libgamehdr.so
-vendor/lib/libged.so
-vendor/lib/libgpu_aux.so
-vendor/lib/libgpud.so
-vendor/lib/libgralloc_extra.so
-vendor/lib/libgralloc_metadata.so
-vendor/lib/libgralloctypes_mtk.so
-vendor/lib/libhdrvideo.so
-vendor/lib/libion_mtk.so
-vendor/lib/libion_ulit.so
-vendor/lib/libmml.so
-vendor/lib/libpq_cust_base.so
-vendor/lib/libpqframework.so
-vendor/lib/libpqparamparser.so
-vendor/lib/libpqpconfig.so
-vendor/lib/libudf.so
-vendor/lib/mt6768/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
 vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
-vendor/lib/mt6768/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
-vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
-vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
-vendor/lib/vendor.mediatek.hardware.pq@2.0.so
-vendor/lib/vendor.mediatek.hardware.pq@2.1.so
-vendor/lib/vendor.mediatek.hardware.pq@2.10.so
-vendor/lib/vendor.mediatek.hardware.pq@2.11.so
-vendor/lib/vendor.mediatek.hardware.pq@2.12.so
-vendor/lib/vendor.mediatek.hardware.pq@2.13.so
-vendor/lib/vendor.mediatek.hardware.pq@2.14.so
-vendor/lib/vendor.mediatek.hardware.pq@2.15.so
-vendor/lib/vendor.mediatek.hardware.pq@2.2.so
-vendor/lib/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib/vendor.mediatek.hardware.pq@2.4.so
-vendor/lib/vendor.mediatek.hardware.pq@2.5.so
-vendor/lib/vendor.mediatek.hardware.pq@2.6.so
-vendor/lib/vendor.mediatek.hardware.pq@2.7.so
-vendor/lib/vendor.mediatek.hardware.pq@2.8.so
-vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
 vendor/lib64/egl/libGLES_meow.so
@@ -722,13 +650,11 @@ vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/libpqpconfig.so
-vendor/lib64/libudf.so
 vendor/lib64/mt6768/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
 vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
@@ -752,6 +678,11 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
+# Display (Thread Unwinding) - from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+vendor/lib/libladder.so
+vendor/lib64/libladder.so
+vendor/lib64/libudf.so
+
 # Display Configs
 vendor/etc/dsi_panel_c3u_35_03_0b_dsc_vdo_mi.xml
 vendor/etc/dsi_panel_c3u_43_02_0a_dsc_vdo_mi.xml
@@ -767,16 +698,26 @@ vendor/firmware/remoteproc_scp
 vendor/firmware/Conf_MultipleTest.ini
 
 # DRM
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/liburee_meta_drmkeyinstall.so
-vendor/lib64/libwvhidl.so
 vendor/lib64/libwvkeyboxext.so
 vendor/lib64/libwvkeybox.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+
+# DRM (Widevine) - from zircon-user 13 TP1A.220624.014 OS2.0.2.0.VNOMIXM release-keys
+vendor/bin/hw/android.hardware.drm-service.widevine
+vendor/etc/init/android.hardware.drm-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
+vendor/lib64/libwvaidl.so
+
+# EngineerMode - from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+system_ext/app/EngineerMode/EngineerMode.apk
+system_ext/lib64/libaudiotoolkit.so
+system_ext/lib64/libem_aoltest_jni.so
+system_ext/lib64/libem_audio_jni.so
+system_ext/lib64/libem_bleoffload_jni.so
+system_ext/lib64/libem_support_jni.so
+system_ext/lib64/libem_wifi_jni.so
 
 # Fingerprint
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
@@ -787,7 +728,6 @@ vendor/lib64/hw/fingerprint.silead.default.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libmifpext.so
-vendor/lib64/com.fingerprints.extension@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libgoodixhwfingerprint.so;DISABLE_CHECKELF
 vendor/lib64/libsl_fp_impl.so
 
@@ -834,20 +774,29 @@ vendor/lib64/libmnl.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
+# ION from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+vendor/lib/libion_mtk.so
+vendor/lib/libion_ulit.so
+vendor/lib64/libion_mtk.so
+vendor/lib64/libion_ulit.so
+
 # Keymaster
 vendor/bin/bp_kmsetkey_ca
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
 vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 
-# Tether Offload
-vendor/bin/hw/tetheroffloadservice
+# NetD Agent
 vendor/bin/netdagent
 vendor/etc/init/netdagent.rc
-vendor/etc/init/tetheroffloadservice.rc
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
+
+# Tether Offload - from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+vendor/bin/hw/tetheroffloadservice
+vendor/etc/init/android.hardware.tetheroffload-V1-service.rc
+vendor/etc/vintf/manifest/android.hardware.tetheroffload-V1-service.xml
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
 vendor/bin/mi_thermald
@@ -880,8 +829,6 @@ vendor/etc/thermald-devices.conf
 vendor/bin/teei_daemon
 vendor/etc/init/microtrust.rc
 vendor/lib/libTEECommon.so
-vendor/lib/libimsg_log.so
-vendor/lib/libteei_daemon_vfs.so
 vendor/lib64/libTEECommon.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libteei_daemon_vfs.so
@@ -951,9 +898,9 @@ vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libasn1c_core.so
 vendor/lib/libasn1c_mapi.so
 vendor/lib/libasn1c_mdmi.so
-vendor/lib/libhevce_sb.ca7.android.so
-vendor/lib/libvp8dec_sa.ca7.so
-vendor/lib/libvp8enc_sa.ca7.so
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
+vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib/libvcodec_utility.so
 vendor/lib/libvcodecdrv.so
@@ -984,13 +931,6 @@ vendor/lib64/libformatter.so
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
-vendor/lib/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib/vendor.mediatek.hardware.mms@1.5.so
-vendor/lib/vendor.mediatek.hardware.mms@1.6.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
@@ -1000,19 +940,21 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 
-# NFC
-vendor/bin/hw/android.hardware.nfc@1.2-service-tms
-vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
-vendor/etc/init/init.thn31.nfc.rc
-vendor/etc/init/init.thn31.se.rc
+# NFC - from gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
+product/pangu/system/etc/permissions/com.tms.cosdl.xml:system/etc/permissions/com.tms.cosdl.xml
+product/pangu/system/etc/permissions/com.tms.nfc.xml:system/etc/permissions/com.tms.nfc.xml
+product/pangu/system/framework/com.tms.cosdl.jar:system/framework/com.tms.cosdl.jar
+product/pangu/system/framework/com.tms.nfc.jar:system/framework/com.tms.nfc.jar
+vendor/bin/hw/android.hardware.nfc-service-tms
 vendor/lib64/7816-3-T1.so
 vendor/lib64/nfc_nci.thn31nfc.tms.so
 vendor/lib64/tms-cos-dl-common.so
 vendor/lib64/tms-cos-dl-ree.so
 vendor/lib64/tms-utils.so
+vendor/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so
 vendor/lib64/vendor.tms.tmsnfc@1.0.so
 
-# NFC (Firmware)
+# NFC (Firmware) - gale-user 15 AP3A.240905.015.A2 OS2.0.6.0.VGPMIXM release-keys
 vendor/etc/SEC_THN31_FW_VTP.txt.bin
 
 # Perf
@@ -1117,7 +1059,7 @@ vendor/etc/init/volte_rcs_ua.rc
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
-vendor/lib/libvolte_core_shr.so
+vendor/lib/libvolte_core_shr.so;DISABLE_CHECKELF
 vendor/lib/libvolte_xdmc_shr.so
 vendor/lib/libvt_custom.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
@@ -1126,35 +1068,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
-
-# Radio (MTK-IMS) 
-system_ext/bin/vtservice
-system_ext/etc/init/init.vtservice.rc
-system_ext/framework/mediatek-common.jar:system/framework/mediatek-common.jar
-system_ext/framework/mediatek-framework.jar:system/framework/mediatek-framework.jar
-system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar
-system_ext/framework/mediatek-ims-common.jar:system/framework/mediatek-ims-common.jar
-system_ext/framework/mediatek-ims-extension-plugin.jar:system/framework/mediatek-ims-extension-plugin.jar
-system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telecom-common.jar
-system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar
-system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar
-system_ext/lib64/libcomutils.so
-system_ext/lib64/libimsma.so;DISABLE_DEPS
-system_ext/lib64/libimsma_adapt.so
-system_ext/lib64/libimsma_rtp.so
-system_ext/lib64/libimsma_socketwrapper.so
-system_ext/lib64/libmtk_vt_service.so
-system_ext/lib64/libmtk_vt_wrapper.so
-system_ext/lib64/libsignal.so
-system_ext/lib64/libsink.so
-system_ext/lib64/libsource.so
-system_ext/lib64/libvcodec_cap.so
-system_ext/lib64/libvcodec_capenc.so
-system_ext/lib64/libvsim-adaptor-client.so
-system_ext/lib64/libvt_avsync.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
--system_ext/priv-app/ImsService/ImsService.apk
 
 # Wi-Fi
 vendor/bin/wlan_assistant

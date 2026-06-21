@@ -1,13 +1,4 @@
-<manifest version="1.0" type="device" >
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+<manifest version="8.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
@@ -15,32 +6,13 @@
         <interface>
             <name>ISecureElement</name>
             <instance>SIM1</instance>
+            <instance>SIM2</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.tms.tmsnfc</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
+    <hal format="aidl">
+        <name>vendor.tms.tmsnfc_aidl</name>
         <interface>
             <name>ITmsNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfclegacy</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfcLegacy</name>
             <instance>default</instance>
         </interface>
     </hal>

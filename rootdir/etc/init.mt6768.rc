@@ -141,28 +141,32 @@ on post-fs
     # allow ccci_mdinit access ccci_dump
     chown root system /proc/ccci_dump
 
-service charger /system/bin/charger
-    class charger
-    critical
-    #seclabel u:r:charger:s0
-    group system graphics
-    seclabel u:r:healthd:s0
-
 on late-fs
-    wait_for_prop hwservicemanager.ready "true"
     setprop init.userspace_reboot.userdata_remount.timeoutmillis 10000
     mount_all /vendor/etc/fstab.mt6768 --late
 
 on post-fs-data
     mkdir /data/vendor 0777 nfc nfc
     mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /data/vendor/nfc_socket 0770 nfc nfc
     mkdir /data/vendor/nfc/param 0777 nfc nfc
     chmod 0777 /dev/nq-nci
     chown nfc nfc /dev/nq-nci
 
     mkdir /data/vendor/secure_element 0777  secure_element secure_element
     chmod 0660 /dev/p73
+    chmod 0660 /dev/pn557
+    chown nfc nfc /dev/pn557
     chown secure_element secure_element /dev/p73
+
+    wait /sys/nfc/chip_name
+    chmod 0660 /dev/tms_nfc
+    chown nfc nfc /dev/tms_nfc
+    chown nfc nfc /sys/nfc/chip_name
+
+    wait /dev/tms_ese 1
+    chmod 0660 /dev/tms_ese
+    chown secure_element secure_element /dev/tms_ese
 
     # boot time fs tune
     write /sys/block/mmcblk0/queue/iostats 0
@@ -880,14 +884,6 @@ on property:vold.decrypt=trigger_restart_framework
 on property:vold.decrypt=trigger_shutdown_framework
     setprop sys.boot_completed 0
     setprop dev.bootcomplete 0
-
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class late_start
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 # end boot time fs tune
 on property:sys.boot_completed=1

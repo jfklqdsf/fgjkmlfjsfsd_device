@@ -87,12 +87,21 @@ on boot
 
     stop console
 
-service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     class hal
     user nfc
     group nfc
     disabled
     override
 
+service nfc_hal_service.tms.aidl /vendor/bin/hw/android.hardware.nfc-service-tms
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on early-init && property:ro.boot.hwname=gust
+   enable vendor.nfc_hal_service
+
 on post-fs && property:ro.boot.hwname=gust
-    start vendor.nfc_hal_service
+   start nfc_hal_service.tms.aidl
